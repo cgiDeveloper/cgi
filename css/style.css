@@ -1,0 +1,269 @@
+body{
+background-color:#F6F6F6;
+margin:0px;
+padding:0px;
+font-family:arial;
+}
+
+.clear{
+clear:both;
+}
+
+/*****************************************css untuk header baheula******************************/
+/*#header{
+height:146px;
+}
+
+#top-nav{
+width:100%;
+height:15%;
+background-color:#E6E6E6;
+}
+
+#top-nav-wrapper{
+height:18px;
+padding-top:3px;
+font-size:11px;
+color:#000;
+margin:0px auto;
+width:1000px;
+}
+
+#user{
+float:left;
+}
+
+#user a{
+color:black;
+text-decoration:none;
+}
+
+#user a:hover{
+color:#45A30C;
+}
+
+#contact{
+float:right;
+}
+
+#menu{
+margin:0px auto;
+height:85%;
+width:1000px;
+}
+
+#logo{
+float:left;
+width:15%;
+}
+
+#logo img{
+width:100px;
+height:70px;
+}
+
+#menu-nav{
+float:left;
+margin:0px auto;
+padding:0px 10px 0px 10px;
+}
+
+#menu-nav ul{
+list-style:none;
+margin:0px;
+padding:0px;
+}
+
+#menu-nav ul li{
+float:left;
+}
+
+#menu-nav ul li a{
+text-decoration:none;
+color:#42B549;
+display:block;
+padding:17px;
+background-color:#cecccc;
+margin-left:1px;
+font-weight:bold;
+}
+
+#menu-nav ul li a:hover{
+background-color:#45A30C;
+color:white;
+}
+
+.first-nav{
+border-radius:0px 0px 0px 15px;
+-moz-border-radius:0px 0px 0px 15px;
+}
+
+.last-nav{
+border-radius:0px 0px 15px 0px;
+-moz-border-radius:0px 0px 15px 0px;
+}
+
+#socmedlist{
+float:right;
+width:15%;
+padding:15px 0px 15px 0px;
+}
+
+#socmedlist ul{
+list-style:none;
+margin:0px;
+padding:0px 0px 0px 30px;
+}
+
+#socmedlist ul li{
+float:left;
+}
+
+#socmedlist ul li a{
+text-decoration:none;
+color:black;
+font-size:11px;
+margin-left:10px;
+}
+
+#socmedlist ul li a img{
+width:30px;
+height:30px;
+}*/
+/*************************************css untuk header baru ******************************/
+#header
+{
+	width:1000px;
+	margin:0px auto;
+	height:150px;
+	padding:0px;
+}
+
+.header-wrap
+{
+	float:left;
+	height:100%;
+}
+
+#header-logo
+{
+	width:40%;
+}
+	
+#header-logo img
+{
+	width:250px;
+	height:150px;
+}
+
+#header-contact
+{
+	width:60%
+}
+/*************************************css untuk menu**************************************/
+#menu
+{
+	width:1000px;
+	padding:5px 0px;
+	border:1px solid #cecccc;
+	margin:0px auto;
+}
+
+#menu ul
+{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+#menu ul li
+{
+	font-size:12px;
+	float:left;
+	border-left:dotted 2px #cecccc;
+	padding:10px 71px;
+}
+
+#menu ul li:first-child
+{
+	border:none;
+}
+
+#menu ul li:hover
+{
+	cursor:pointer;
+}
+
+#menu ul li:hover a
+{
+	color:#A2A2A2;
+}
+
+#menu ul li a
+{
+	text-decoration:none;
+	color:#2d2c2a;
+}
+/*************************************css untuk carousel**********************************/
+#carousel-container
+{
+	width:1000px;
+	margin:0px auto;
+	border:1px solid #cecccc;
+	border-bottom:none;
+}
+/*************************************css untuk footer************************************/
+#footer
+{
+	border-top:1px solid #cecccc;
+	width:1000px;
+	padding:10px 0px;
+	margin:10px auto 0px auto;
+}
+
+#footer-link
+{
+	width:1000px;	
+}
+
+#footer-link ul
+{
+	padding:0px;
+	margin:0px;
+}
+
+#footer-link ul li:first-child
+{
+	border-left:none;
+	margin-left:0px;
+	padding-left:0px;
+}
+
+#footer-link ul li
+{
+	font-size:12px;
+	list-style:none;
+	float:left;
+	margin-left:10px;
+	padding-left:10px;
+	border-left:solid 1px #cecccc;
+}
+
+#footer-link ul li a
+{
+	text-decoration:none;
+	color:#52555f;
+}
+
+#footer-link ul li a:hover
+{
+	color:#A2A2A2;
+}
+
+#cpright
+{
+	font-size:10px;
+	color:#52555f;
+	font-weight:bold;
+	margin-top:10px;
+}

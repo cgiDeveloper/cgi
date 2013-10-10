@@ -1,0 +1,113 @@
+h3{
+//color:#959595;
+font-weight:normal;
+}
+
+input{
+width:240px;
+height:25px;
+border:1px solid #DFDFDF;
+}
+
+label{
+font-size:13px;
+float:left;
+margin-top:5px;
+//color:#959595;
+}
+
+label:hover{
+cursor:pointer;
+}
+
+#login-wrapper{
+width:1000px;
+margin:0px auto 10px auto;
+}
+
+.top-title{
+width:350px;
+margin:50px auto 0px auto;
+}
+
+#login-form{
+background-color:#FFFFFF;
+float:left;
+width:490px;
+height:350px;
+border:2px solid #DFDFDF;
+}
+
+#register-form{
+background-color:#FFFFFF;
+float:left;
+width:490px;
+height:350px;
+margin-left:10px;
+border:2px solid #DFDFDF;
+}
+
+#login-box{
+margin:0px auto;
+width:350px;
+height:120px;
+border-top:2px solid #DFDFDF;
+border-bottom:2px solid #DFDFDF;
+padding-top:15px;
+padding-bottom:14px;
+}
+
+#form-row2{
+margin-top:10px;
+}
+
+.input-text{
+float:right;
+}
+
+#submit-btn-wrap{
+margin-right:121px;
+margin-top:10px;
+}
+
+#submit-btn{
+background-color:#3c8e08;
+height:30px;
+width:120px;
+border:0px;
+color:white;
+font-family:'Lucida Grande',Tahoma,Verdana,Arial,sans-serif;;
+font-weight:bold;
+}
+
+#submit-btn:hover{
+background-color:#296b01;
+cursor:pointer;
+}
+
+#forgotpassword{
+margin-top:10px;
+}
+
+#register-box-wrap{
+margin:0px auto;
+width:350px;
+height:150px;
+}
+
+#register-box-wrap p{
+font-size:13px;
+}
+
+#register-box-wrap a{
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
+padding:8px 35px;
+background-color:#3c8e08;
+color:white;
+}
+
+#register-box-wrap a:hover{
+background-color:#296b01;
+}
