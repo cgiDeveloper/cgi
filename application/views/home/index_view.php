@@ -1,12 +1,11 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head><title></title></head>
 <link rel="stylesheet" href="<?php echo base_url();?>css/style.css" type="text/css"></link>
 <link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css" type="text/css"></link>
 <body>
 	<?php 
-		$data['comp'] = $comp;
-		$data['menu'] = $menu;
-		$this->load->view('header', $data);
+		$this->load->view('/templates/header');
 	?>
 	<div id="carousel-container">
 		  <div id="this-carousel-id" class="carousel slide">
@@ -19,7 +18,7 @@
 			  <div class="item">
 				<a href="http://hubblesite.org/gallery/album/entire/pr2007016e/xlarge_web/npp/128/">
 				  <img src="<?php echo $this->config->base_url()?>images/carina.jpg" alt="Carina Caterpillar" />
-				</a>				
+				</a>
 			  </div>
 			  <div class="item">
 				<a href="http://hubblesite.org/gallery/album/entire/pr2003010i/npp/128/">
@@ -49,8 +48,7 @@
 		  <!-- end carousel -->
 	</div>
 	<?php
-		$data['footer'] = $footer;
-		$this->load->view('footer', $data);
+		$this->load->view('/templates/footer');
 	?>
 	<script src="<?php echo $this->config->base_url();?>js/jquery.js"></script>
 	<script src="<?php echo $this->config->base_url();?>js/bootstrap.min.js"></script>
