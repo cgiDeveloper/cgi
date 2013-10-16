@@ -1,0 +1,71 @@
+.page-content-wrapper
+{
+	width:1000px;
+	margin:0px auto;
+	border:1px solid #cecccc;
+	border-top:none;
+}
+
+.image-content-banner img
+{
+	width:998px;
+	height:250px;
+}
+
+.content-wrapper
+{
+	padding : 20px 30px;
+}
+
+.title-content
+{
+	margin-bottom:25px;
+}
+
+h1
+{
+	color:#3a322d;
+	font:36px sans-serif;
+}
+
+#text-content
+{
+	float:left;
+	width:45%;
+}
+
+#image-content
+{
+	float:left;
+	width:40%;
+	margin-left:100px;
+}
+
+#image-content img
+{
+	width:400px;
+	height:400px;
+}
+
+.catalog-download
+{
+	width:1000px;
+	padding:20px 0px;
+	margin:0px auto;
+	border-top:1px solid #cecccc;
+	background-color:#c0b6c8;
+}
+
+.catalog-download a
+{
+	padding-left:55px;
+	text-decoration:none;
+	color:white;
+	font:36px MuseoSlab500, sans-serif;
+	font-style:italic;
+	margin-left:300px;
+	background-image:url(../images/Catalog-Icon.png);
+	background-size:50px 50px;
+	background-repeat:no-repeat;
+	background-position:left center;
+}

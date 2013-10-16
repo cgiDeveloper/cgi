@@ -160,6 +160,23 @@ height:30px;
 {
 	width:60%
 }
+
+#myaccount
+{
+	font-size:12px;
+}
+
+/*#myaccount div label
+{
+	background-image();
+}*/
+
+#myaccount a
+{
+	text-decoration:none;
+	color:#403c3a;
+	font-size:12px;
+}
 /*************************************css untuk menu**************************************/
 #menu
 {

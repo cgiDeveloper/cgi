@@ -9,7 +9,13 @@
 		<a href="<?php echo $this->config->site_url();?>/home"><img src="<?php echo $this->config->base_url();?>images/logo.png" /></a>
 	</div>
 	<div id="header-contact" class="header-wrap">
-		lorem ipsum dolor sit amet
+		<div id="info-comp">
+		</div>
+		<div id="myaccount">
+			<div style="float:left;"><label>My account</label></div>
+			<div style="float:left;margin-left:10px;margin-top:1px;"><a href="#">Login</a> | <a href="#">Sign up</a> | <a href="#">Download Catalog</a></div>
+			<div class="clear"></div>
+		</div>
 	</div>
 	<div class="clear"></div>
 </div>

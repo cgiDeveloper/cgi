@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="<?php echo base_url();?>css/style.css" type="text/css"></link>
 <link rel="stylesheet" href="<?php echo base_url();?>css/login.css" type="text/css"></link>
 <body>
-	<?php $this->load->view('header');?>
+	<?php $this->load->view('/templates/header');?>
 	<div id="login-wrapper">
 		<div id="login-form">
 			<div class="top-title">
@@ -41,7 +41,7 @@
 			<?php ?>
 			</div>
 			<div id="forgotpassword" class="top-title">
-				<a href="<?php echo $this->config->site_url();?>/login/requestpassword" style="font-size:11px;text-decoration:none;color:#44a20b;">Lupa password?</a>
+				<a href="<?php echo $this->config->site_url();?>/login/requestpassword" style="font-size:11px;text-decoration:none;color:#44a20b;"><?php echo $question;?></a>
 			</div>
 		</div>
 		<div id="register-form">
@@ -50,7 +50,7 @@
 			</div>
 			<div id="register-box-wrap">				
 				<p>
-					Daftarlah menjadi reseller CGI untuk mendownload katalog secara gratis dan menikmati keseluruhan fitur di web kami!
+					<?php echo $reseller_msg; ?>
 				</p>
 				<a href="<?php echo $this->config->site_url();?>/register">Register</a>
 			</div>
@@ -58,6 +58,6 @@
 		<div class="clear">
 		</div>
 	</div>
-	<?php $this->load->view('footer');?>
+	<?php $this->load->view('/templates/footer');?>
 </body>
 </html>

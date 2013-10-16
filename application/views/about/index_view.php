@@ -17,7 +17,9 @@
 				<h1><?php echo $title; ?></h1>
 			</div>
 			<div class="real-content">
-				<?php echo $content;?>
+				<div id="text-content"><?php echo $content;?></div>
+				<div id="image-content"><img src="<?php echo base_url();?>images/cth-about-banner.jpg" /></div>
+				<div class="clear"></div>
 			</div>
 		</div>
 		<div class="catalog-download">
