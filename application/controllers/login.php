@@ -6,11 +6,11 @@ class Login extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper('form');
-		$this->lang->load('message', 'english');
 	}
 	
 	public function index()
 	{
+		$this->lang->load('message', 'english');
 		$data['question'] = $this->lang->line('forget');
 		$data['reseller_msg'] = $this->lang->line('register_msg');
 		$this->load->view('/login/index_view', $data);

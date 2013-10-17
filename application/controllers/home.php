@@ -7,10 +7,12 @@ class Home extends CI_Controller
 		parent::__construct();
 		$this->load->helper('form');
 		$this->load->model('carousel');
+		$this->lang->load('message', 'english');
 	}
 	
 	public function index()
 	{
+		$data['dl_message'] = $this->lang->line('content_download'); 
 		$resultsCarousel = $this->carousel->get_carousel();
 		$data['carousel'] = $resultsCarousel;
 		$this->load->view('/home/index_view', $data);

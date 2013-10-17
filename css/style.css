@@ -1,5 +1,5 @@
 body{
-background-color:#F6F6F6;
+background-color:#E6E6E6;
 margin:0px;
 padding:0px;
 font-family:arial;
@@ -8,128 +8,6 @@ font-family:arial;
 .clear{
 clear:both;
 }
-
-/*****************************************css untuk header baheula******************************/
-/*#header{
-height:146px;
-}
-
-#top-nav{
-width:100%;
-height:15%;
-background-color:#E6E6E6;
-}
-
-#top-nav-wrapper{
-height:18px;
-padding-top:3px;
-font-size:11px;
-color:#000;
-margin:0px auto;
-width:1000px;
-}
-
-#user{
-float:left;
-}
-
-#user a{
-color:black;
-text-decoration:none;
-}
-
-#user a:hover{
-color:#45A30C;
-}
-
-#contact{
-float:right;
-}
-
-#menu{
-margin:0px auto;
-height:85%;
-width:1000px;
-}
-
-#logo{
-float:left;
-width:15%;
-}
-
-#logo img{
-width:100px;
-height:70px;
-}
-
-#menu-nav{
-float:left;
-margin:0px auto;
-padding:0px 10px 0px 10px;
-}
-
-#menu-nav ul{
-list-style:none;
-margin:0px;
-padding:0px;
-}
-
-#menu-nav ul li{
-float:left;
-}
-
-#menu-nav ul li a{
-text-decoration:none;
-color:#42B549;
-display:block;
-padding:17px;
-background-color:#cecccc;
-margin-left:1px;
-font-weight:bold;
-}
-
-#menu-nav ul li a:hover{
-background-color:#45A30C;
-color:white;
-}
-
-.first-nav{
-border-radius:0px 0px 0px 15px;
--moz-border-radius:0px 0px 0px 15px;
-}
-
-.last-nav{
-border-radius:0px 0px 15px 0px;
--moz-border-radius:0px 0px 15px 0px;
-}
-
-#socmedlist{
-float:right;
-width:15%;
-padding:15px 0px 15px 0px;
-}
-
-#socmedlist ul{
-list-style:none;
-margin:0px;
-padding:0px 0px 0px 30px;
-}
-
-#socmedlist ul li{
-float:left;
-}
-
-#socmedlist ul li a{
-text-decoration:none;
-color:black;
-font-size:11px;
-margin-left:10px;
-}
-
-#socmedlist ul li a img{
-width:30px;
-height:30px;
-}*/
 /*************************************css untuk header baru ******************************/
 #header
 {
@@ -137,6 +15,9 @@ height:30px;
 	margin:0px auto;
 	height:150px;
 	padding:0px;
+	border:1px solid #cecccc;
+	border-top:0px;
+	margin-bottom:10px;
 }
 
 .header-wrap
@@ -148,28 +29,65 @@ height:30px;
 #header-logo
 {
 	width:40%;
+	border-right:1px solid #cecccc;
 }
 	
 #header-logo img
 {
 	width:250px;
 	height:150px;
+	margin-left:80px;
 }
 
 #header-contact
 {
-	width:60%
+	width:59.9%
+}
+
+#info-comp ul
+{
+	list-style:none;
+	margin-left:50px;
+	padding-left:0px;
+}
+
+#info-comp ul li
+{
+	background-repeat:no-repeat;
+	background-position:left center;
+	background-size:20px 20px;
+	padding-left:25px;
+	background-image:url('../images/telephone-icon.png');
+	margin-top:5px;
+	font-size:20px;
+}
+
+#info-comp ul li:nth-child(2)
+{
+	background-image:url('../images/blackberry-icon.png');
+}
+
+#info-comp ul li:last-child
+{
+	background-image:url('../images/email-icon.png');
 }
 
 #myaccount
 {
 	font-size:12px;
+	border-top:1px solid #cecccc;
+	padding:20px 0px 0px 50px;
 }
 
-/*#myaccount div label
+#myaccount div label
 {
-	background-image();
-}*/
+	background-image:url('../images/akun.png');
+	background-position:left center;
+	background-size:20px 20px;
+	background-repeat:no-repeat;
+	padding-left:25px;
+	cursor:default;
+}
 
 #myaccount a
 {
@@ -177,11 +95,16 @@ height:30px;
 	color:#403c3a;
 	font-size:12px;
 }
+
+#myaccount a:hover
+{
+	text-decoration:underline;
+}
 /*************************************css untuk menu**************************************/
 #menu
 {
 	width:1000px;
-	padding:5px 0px;
+	padding:15px 0px;
 	border:1px solid #cecccc;
 	margin:0px auto;
 }
@@ -197,13 +120,6 @@ height:30px;
 {
 	font-size:12px;
 	float:left;
-	border-left:dotted 2px #cecccc;
-	padding:10px 71px;
-}
-
-#menu ul li:first-child
-{
-	border:none;
 }
 
 #menu ul li:hover
@@ -218,8 +134,15 @@ height:30px;
 
 #menu ul li a
 {
+	border-left:dotted 2px #cecccc;
+	padding:15px 71px;
 	text-decoration:none;
 	color:#2d2c2a;
+}
+
+#menu ul li:first-child a
+{
+	border:none;
 }
 /*************************************css untuk carousel**********************************/
 #carousel-container
@@ -230,6 +153,66 @@ height:30px;
 	border-bottom:none;
 }
 /*************************************css untuk footer************************************/
+#footerpagewrapper
+{
+	padding:0px;
+	width:1000px;
+	margin:20px auto 0px auto;
+}
+
+#footerpagetitle
+{
+	padding:10px 0px;
+	border-bottom:1px solid #cecccc;
+	color:#52555f;
+	font-weight:bold;
+}
+
+#footerpageproducts
+{
+	padding:10px 0px;
+}
+
+#footerpagelink
+{
+	float:left;
+	width:70%;
+	background-color:red;
+	padding:10px 0px;
+}
+
+#footerpagesocmed
+{
+	float:left;
+	width:30%;
+	padding:0px;
+}
+
+.socmedrow:first-child
+{
+	margin-top:0px;
+}
+
+.socmedrow
+{
+	font-size:12px;
+	font-weight:bold;
+	color:#52555f;
+	margin-top:10px;
+}
+
+.socmedicon
+{
+	width:150px;
+	float:right;
+	margin-right:30px;
+}
+
+.twitter-button
+{
+	float:left;
+}
+
 #footer
 {
 	border-top:1px solid #cecccc;

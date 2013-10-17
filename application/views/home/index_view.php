@@ -3,12 +3,13 @@
 <head><title></title></head>
 <link rel="stylesheet" href="<?php echo base_url();?>css/style.css" type="text/css"></link>
 <link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css" type="text/css"></link>
+<link rel="stylesheet" href="<?php echo base_url();?>css/page-content.css" type="text/css"></link>
 <body>
 	<?php 
 		$this->load->view('/templates/header');
 	?>
 	<div id="carousel-container">
-		  <div id="this-carousel-id" class="carousel slide">
+		  <div style="margin-bottom:5px;" id="this-carousel-id" class="carousel slide">
 			<div class="carousel-inner">
 			  <!--<div class="item active">
 				<a href="http://hubblesite.org/gallery/album/entire/pr2006046a/xlarge_web/npp/128/">  
@@ -46,6 +47,9 @@
 			  <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
 		  </div>
 		  <!-- end carousel -->
+	</div>
+	<div class="catalog-download">
+		<a href="<?php echo $this->config->site_url();?>/catalog_download"><?php echo $dl_message;?></a>
 	</div>
 	<?php
 		$this->load->view('/templates/footer');

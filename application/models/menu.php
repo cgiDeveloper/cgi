@@ -9,6 +9,7 @@ class Menu extends CI_Model
 	public function get_company_profile()
 	{
 		$this->db->select('phone, bb, email, logo_src');
+		$this->db->limit(1);
 		$this->db->from('comp_data');
 		$query = $this->db->get();
 		return $query->result_array();

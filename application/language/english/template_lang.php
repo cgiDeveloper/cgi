@@ -1,0 +1,11 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+$lang["account"] = "My Account";
+$lang["login"] = "Login";
+$lang["signup"] = "Sign Up";
+$lang["download"] = "Download Catalog";
+$lang["telp"] = "Customer Hotline";
+$lang["bb"] = "BB Pin";
+$lang["product"] = "Our Products";
+$lang["fb"] = "CGI on Facebook";
+$lang["twitter"] = "CGI on Twitter";
+$lang["share"] = "Share With a Friend";
