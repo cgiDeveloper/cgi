@@ -12,9 +12,44 @@ class Template
 	public function set_template($template)
 	{
 		if($template=='footer')
-			return $this->model->get_menu_footer('en');
+		{
+			$data['menu_footer'] = $this->model->get_menu_footer('en');
+			$data['product_footer'] = $this->model->get_product_footer('en');
+			$i = 0;
+			foreach($data['product_footer'] as $parent)
+			{
+				$data_temp = $this->model->get_product_footer('en', $parent['id']);
+				if($data_temp)
+					$data['product_footer'][$i]['child'] = $data_temp;
+				$i++;
+			}
+			//echo "<pre>";print_r($data['product_footer']);
+			return $data;
+		}
 		else if($template=='header')
-			return $this->model->get_menu('en');
+		{
+			$data = $this->model->get_menu('en');
+			$i = 0;
+			foreach($data as $parent)
+			{
+				$data_temp = $this->model->get_menu('en', $parent['id']);
+				if($data_temp)
+				{
+					$data[$i]['child'] = $data_temp;
+					$j = 0;
+					foreach($data[$i]['child'] as $parent2)
+					{
+						$data_temp2 = $this->model->get_menu('en', $parent2['id']);
+						if($data_temp2)
+							$data[$i]['child'][$j]['child'] = $data_temp2;
+						$j++;
+					}
+				}
+				$i++;
+			}
+			//echo "<pre>";print_r($data);
+			return $data;
+		}
 	}
 	
 	public function get_company_profile()

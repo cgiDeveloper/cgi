@@ -116,23 +116,33 @@ clear:both;
 	list-style:none;
 }
 
-#menu ul li
+.main-menu
 {
 	font-size:12px;
 	float:left;
 }
 
-#menu ul li:hover
+.main-menu:hover
 {
 	cursor:pointer;
 }
 
-#menu ul li:hover a
+.main-menu:hover .submenu
+{
+	display: block;
+}
+
+.main-menu:hover a
 {
 	color:#A2A2A2;
 }
 
-#menu ul li a
+.main-menu a:hover
+{
+	text-decoration: none;
+}
+
+.main-menu a
 {
 	border-left:dotted 2px #cecccc;
 	padding:15px 71px;
@@ -140,9 +150,65 @@ clear:both;
 	color:#2d2c2a;
 }
 
-#menu ul li:first-child a
+.main-menu:first-child a
 {
 	border:none;
+}
+
+.child-menu
+{
+	float:left;
+	margin-left: 55px;
+}
+
+.child-menu:first-child
+{
+	margin-left: 0px;
+}
+
+.child-menu a
+{
+	color: black!important;
+	margin: 0px;
+	padding: 0px;
+	border:none;
+	font-weight: bold;
+	border-bottom: 1px solid #cecccc;
+}
+
+.child-menu ul
+{
+	padding:0px 0px 0px 15px !important;
+	margin:0px;
+}
+
+.child-menu2
+{
+	float: none;
+	list-style: disc;
+}
+
+.child-menu2 a
+{
+	padding:0px;
+	margin: 0px;
+	font-weight: normal;
+}
+
+.submenu
+{
+	display: none;
+	padding:10px;
+	position:absolute;
+	margin-top:15px;
+	border:1px solid #cecccc;
+	background-color:white;
+	z-index:2000;
+}
+
+.submenu:hover
+{
+	display: block;
 }
 /*************************************css untuk carousel**********************************/
 #carousel-container
@@ -176,9 +242,38 @@ clear:both;
 #footerpagelink
 {
 	float:left;
-	width:70%;
-	background-color:red;
-	padding:10px 0px;
+	width:70%;	
+/*padding:10px 0px;*/
+}
+
+#footerpagelink ul
+{
+	list-style:none;
+	padding:0px;
+	margin:0px;
+}
+
+#footerpagelink ul li
+{
+	font-weight:normal;
+}
+
+#footerpagelink ul li.category
+{
+	float:left;
+	margin-left:80px;
+	font-weight:bold;
+	font-size:12px;
+}
+
+#footerpagelink ul li.category:first-child
+{
+	margin:0px;
+}
+
+#footerpagelink ul li a
+{
+	color:#52555f;
 }
 
 #footerpagesocmed

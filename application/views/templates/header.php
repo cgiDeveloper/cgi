@@ -36,7 +36,28 @@
 	<?php
 		foreach($menu as $list_menu)
 		{
-			echo "<li><a href='".$this->config->site_url()."/".$list_menu['link']."'>".$list_menu['text']."</a></li>";
+			if($list_menu['child'])
+			{
+				$submenu = "<li class='main-menu haschild'><a href='".$this->config->site_url()."/".$list_menu['link']."'>".$list_menu['text']."</a><div class='submenu'><ul>";
+				foreach($list_menu['child'] as $child_menu)
+				{
+					$submenu .= "<li class='child-menu'><a href='".$this->config->site_url()."/".$child_menu['link']."'>".$child_menu['text']."</a>";
+					if($child_menu['child'])
+					{
+						$submenu .= "<ul>";
+						foreach($child_menu['child'] as $child_menu2)
+						{
+							$submenu .= "<li class='child-menu2'><a href='".$this->config->site_url()."/".$child_menu2['link']."'>".$child_menu2['text']."</a>";
+						}
+						$submenu .= "</ul>";
+					}
+					$submenu .= "</li>";
+				}
+				$submenu .= "</ul></div></li>";
+				echo $submenu;
+			}
+			else
+				echo "<li class = 'main-menu'><a href='".$this->config->site_url()."/".$list_menu['link']."'>".$list_menu['text']."</a></li>";
 		}		
 	?>
 	</ul>

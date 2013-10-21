@@ -15,12 +15,24 @@ class Menu extends CI_Model
 		return $query->result_array();
 	}
 	
-	public function get_menu($lang = 'id')
+	public function get_menu($lang = 'id', $parent = 0)
 	{
-		$this->db->select('text, link, parent_id');
-		$this->db->where('lang', $lang);
+		$cond = array('lang'=>$lang, 'status'=>1, 'parent_id'=>$parent);
+		$this->db->select('id, text, link, parent_id');
+		$this->db->where($cond);
 		$this->db->order_by("order");
 		$this->db->from('menu_header');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+	
+	public function get_product_footer($lang = 'id', $parent = 0)
+	{
+		$cond = array('lang'=>$lang, 'status'=>1, 'parent_id'=>$parent);
+		$this->db->select('id, text, link, parent_id');
+		$this->db->where($cond);
+		$this->db->order_by("order");
+		$this->db->from('menu_footer');
 		$query = $this->db->get();
 		return $query->result_array();
 	}

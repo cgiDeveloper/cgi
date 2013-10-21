@@ -9,7 +9,29 @@
 <div id="footerpagewrapper">
 	<div id="footerpagetitle"><?php echo $words['product'];?></div>
 	<div id="footerpageproducts">
-		<div id="footerpagelink"></div>
+		<div id="footerpagelink">
+			<ul>
+			<?php 			
+				foreach($footer['product_footer'] as $footer_link)
+				{
+					if($footer_link['child'])
+					{
+						$footer_link_children = "<li class='category'><a href='".$this->config->site_url()."/".$footer_link['link']."'>".$footer_link['text']."</a>";
+						foreach($footer_link['child'] as $child)
+						{
+							$footer_link_children .= "<ul>";
+							$footer_link_children .= "<li><a href='".$this->config->site_url()."/".$child['link']."'>".$child['text']."</a></li>";
+							$footer_link_children .= "</ul>";
+						}
+						$footer_link_children .= "</li>";
+						echo $footer_link_children;
+					}
+					else
+						echo "<li class='category'><a href='".$this->config->site_url()."/".$footer_link['link']."'>".$footer_link['text']."</a></li>";
+				}
+			?>
+			</ul>
+		</div>
 		<div id="footerpagesocmed">
 			<div class="socmedrow" style="color:#3B5998">
 				<?php echo $words['fb']; ?>
@@ -43,7 +65,7 @@
 	<div id="footer-link">		
 		<ul>
 		<?php 			
-			foreach($footer as $footer_link)
+			foreach($footer['menu_footer'] as $footer_link)
 			{
 				echo "<li><a href='".$this->config->site_url()."/".$footer_link['link']."'>".$footer_link['text']."</a></li>";
 			}

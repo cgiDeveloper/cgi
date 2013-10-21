@@ -11,26 +11,6 @@
 	<div id="carousel-container">
 		  <div style="margin-bottom:5px;" id="this-carousel-id" class="carousel slide">
 			<div class="carousel-inner">
-			  <!--<div class="item active">
-				<a href="http://hubblesite.org/gallery/album/entire/pr2006046a/xlarge_web/npp/128/">  
-					<img src="<?php echo $this->config->base_url()?>images/antennae.jpg" alt="Antennae Galaxies" />
-				</a>
-			  </div>
-			  <div class="item">
-				<a href="http://hubblesite.org/gallery/album/entire/pr2007016e/xlarge_web/npp/128/">
-				  <img src="<?php echo $this->config->base_url()?>images/carina.jpg" alt="Carina Caterpillar" />
-				</a>
-			  </div>
-			  <div class="item">
-				<a href="http://hubblesite.org/gallery/album/entire/pr2003010i/npp/128/">
-				  <img src="<?php echo $this->config->base_url()?>images/echo.jpg" alt="Light Echo" />
-				</a>				
-			  </div>
-			  <div class="item">
-				<a href="http://hubblesite.org/gallery/album/entire/pr2006024a/xlarge_web/npp/128/">
-				  <img src="<?php echo $this->config->base_url()?>images/ngc5866.jpg" alt="Galaxy NGC5866" />
-				</a>				
-			  </div>-->
 				<?php
 					foreach($carousel as $img_list)
 					{
