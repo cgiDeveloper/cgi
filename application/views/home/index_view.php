@@ -29,7 +29,7 @@
 		  <!-- end carousel -->
 	</div>
 	<div class="catalog-download">
-		<a href="<?php echo $this->config->site_url();?>/catalog_download"><?php echo $dl_message;?></a>
+		<a href="<?php echo $this->config->site_url();?>/pages/catalog_download"><?php echo $dl_message;?></a>
 	</div>
 	<?php
 		$this->load->view('/templates/footer');

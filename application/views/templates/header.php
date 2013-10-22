@@ -23,7 +23,7 @@
 		</div>
 		<div id="myaccount">
 			<div style="float:left;"><label><?php echo $words['account'];?></label></div>
-			<div style="float:left;margin-left:10px;margin-top:1px;"><a href="<?php echo $this->config->site_url();?>/login"><?php echo $words['login'];?></a> | <a href="<?php echo $this->config->site_url();?>/sign_up"><?php echo $words['signup'];?></a> | <a href="<?php echo $this->config->site_url();?>/catalog_download"><?php echo $words['download'];?></a></div>
+			<div style="float:left;margin-left:10px;margin-top:1px;"><a href="<?php echo $this->config->site_url();?>/pages/login"><?php echo $words['login'];?></a> | <a href="<?php echo $this->config->site_url();?>/pages/sign_up"><?php echo $words['signup'];?></a> | <a href="<?php echo $this->config->site_url();?>/pages/catalog_download"><?php echo $words['download'];?></a></div>
 			<div class="clear"></div>
 		</div>
 	</div>

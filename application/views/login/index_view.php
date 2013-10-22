@@ -2,6 +2,7 @@
 <html>
 <head><title></title></head>
 <link rel="stylesheet" href="<?php echo base_url();?>css/style.css" type="text/css"></link>
+<link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css" type="text/css"></link>
 <link rel="stylesheet" href="<?php echo base_url();?>css/login.css" type="text/css"></link>
 <body>
 	<?php $this->load->view('/templates/header');?>
@@ -13,8 +14,9 @@
 			<div id="login-box">
 			<?php echo form_open('login/check_login');?>
 				<div id="form-row1">
-					<?php echo form_label('Email', 'inputemail');?>
 					<?php
+						$label_att = array('class'=>'label_login') ;
+						echo form_label('Email', 'inputemail', $label_att);
 						$emailform = array('name'=>'inputemail', 'id'=>'inputemail');
 						$passwordform = array('name'=>'inputpassword', 'id'=>'inputpassword');
 					?>
@@ -24,7 +26,7 @@
 					<div class="clear"></div>
 				</div>
 				<div id="form-row2">
-					<?php echo form_label('Password', 'inputpassword');?>
+					<?php echo form_label('Password', 'inputpassword', $label_att);?>
 					<div class="input-text">
 						<?php echo form_input($passwordform);?>
 					</div>
