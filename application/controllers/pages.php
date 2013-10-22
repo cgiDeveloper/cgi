@@ -88,7 +88,6 @@ class Pages extends CI_Controller
 		$data['question'] = $this->lang->line('forget');
 		$data['reseller_msg'] = $this->lang->line('register_msg');
 		$this->load->view('/'.__FUNCTION__.'/index_view', $data);
-		//$this->load->view('/news/index_view');
 	}
 
 	public function catalog_download()
