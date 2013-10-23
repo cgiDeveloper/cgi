@@ -5,11 +5,14 @@
 <link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css" type="text/css"></link>
 <link rel="stylesheet" href="<?php echo base_url();?>css/page-content.css" type="text/css"></link>
 <body>
-	<?php 
-		$this->load->view('/templates/header');
-	?>
-	<?php
-		$this->load->view('/templates/footer');
-	?>
+	<?php $this->load->view('/templates/header');?>
+	<div class="page-content-wrapper">
+		<div class="content-wrapper">
+			<div class="title-content">
+				<h1><?php echo $title['title']; ?></h1>
+			</div>
+		</div>
+	</div>
+	<?php $this->load->view('/templates/footer');?>
 </body>
 </html>

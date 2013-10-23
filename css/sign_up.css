@@ -1,0 +1,73 @@
+label.label-membertype
+{
+	float:left;
+}
+
+#signup-title
+{
+	color:#3a322d;
+	font:36px sans-serif;
+	margin-left: 220px;
+}
+#sign_up_wrapper
+{
+	width:1000px;
+	padding:20px 0px;
+	margin:10px auto;
+	border:1px solid #cecccc;
+	background-color: white;
+}
+
+fieldset.fieldset-signup
+{
+	/*margin-top:50px;*/
+}
+
+.data-form
+{
+	width:550px;
+	padding:10px 0px 10px 0px;
+	margin:10px auto;
+}
+
+.label-signup
+{
+	/*width:200px;*/
+	width:150px;
+	float:left;
+	margin-left: 20px;
+}
+
+.label-signup label
+{
+	margin-top:5px;
+}
+
+.label-signup input
+{
+	width:300px;
+}
+
+textarea.textarea-add
+{
+	width:300px;
+	height: 100px;
+}
+
+#select-nation, #select-region
+{
+	width:315px;
+}
+
+.label-signup input[type="checkbox"]
+{
+	margin:5px;
+}
+
+span.important
+{
+	float:left;
+	color:red;
+	margin:5px 0px 0px 0px;
+	padding:0px;
+}

@@ -130,6 +130,7 @@ clear:both;
 .main-menu:hover .submenu
 {
 	display: block;
+	position:absolute;
 }
 
 .main-menu:hover a

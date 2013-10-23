@@ -54,7 +54,7 @@
 				<p>
 					<?php echo $reseller_msg; ?>
 				</p>
-				<a href="<?php echo $this->config->site_url();?>/register">Register</a>
+				<a href="<?php echo $this->config->site_url();?>/pages/sign_up">Register</a>
 			</div>
 		</div>
 		<div class="clear">

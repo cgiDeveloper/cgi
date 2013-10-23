@@ -67,7 +67,9 @@ class Pages extends CI_Controller
 
 	public function retail_location()
 	{
-		$this->load->view('/'.__FUNCTION__.'/index_view');	
+		$data['title'] = $this->get_contents($this->code_lang, __FUNCTION__);
+
+		$this->load->view('/'.__FUNCTION__.'/index_view', $data);	
 	}
 
 	public function product()
@@ -87,6 +89,43 @@ class Pages extends CI_Controller
 		$this->lang->load('message', $this->language);
 		$data['question'] = $this->lang->line('forget');
 		$data['reseller_msg'] = $this->lang->line('register_msg');
+		$this->load->view('/'.__FUNCTION__.'/index_view', $data);
+	}
+
+	public function sign_up()
+	{
+		$this->load->helper('form');
+		$this->load->model(__FUNCTION__);
+		$this->lang->load('registration', $this->language);
+
+		$data['first_name'] = $this->lang->line('first_name');
+		$data['last_name'] = $this->lang->line('last_name');
+		$data['store_name'] = $this->lang->line('store_name');
+		$data['email'] = $this->lang->line('email');
+		$data['phone'] = $this->lang->line('phone');
+		$data['pin_bb'] = $this->lang->line('pin_bb');
+		$data['address'] = $this->lang->line('address');
+		$data['destination_address'] = $this->lang->line('destination_address');
+		$data['nation_name'] = $this->lang->line('nation_name');
+		$data['region_name'] = $this->lang->line('region_name');
+		$data['website'] = $this->lang->line('website');
+		$data['omzet'] = $this->lang->line('omzet');
+		$data['total_employee'] = $this->lang->line('total_employee');
+		$data['questionaire'] = $this->lang->line('questionaire');
+		$data['title_page'] = $this->lang->line('title_page');
+		$data['legend1'] = $this->lang->line('legend1');
+		$data['legend2'] = $this->lang->line('legend2');
+		$data['legend3'] = $this->lang->line('legend3');
+		$data['register'] = $this->lang->line('register');
+		$data['member_items'] = $this->lang->line('member_items');
+		$data['member_interests'] = $this->lang->line('member_interests');
+
+		$data['media'] = $this->sign_up->get_media($this->code_lang);
+		$data['nations'] = $this->sign_up->get_nation();
+		$data['regions'] = $this->sign_up->get_region();
+		$data['category_product'] = $this->sign_up->get_item_category($this->code_lang);
+		//echo "<pre>";print_r($data['media']);
+
 		$this->load->view('/'.__FUNCTION__.'/index_view', $data);
 	}
 

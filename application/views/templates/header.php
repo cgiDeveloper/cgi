@@ -10,7 +10,7 @@
 <!-- start of header -->
 <div id="header">
 	<div id="header-logo" class="header-wrap">
-		<a href="<?php echo $this->config->site_url();?>/home"><img src="<?php echo $this->config->base_url();?>images/logo.png" /></a>
+		<a href="<?php echo $this->config->site_url();?>"><img src="<?php echo $this->config->base_url();?>images/logo.png" /></a>
 	</div>
 	<div id="header-contact" class="header-wrap">
 		<div id="info-comp">
