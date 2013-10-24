@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="<?php echo base_url();?>css/sign_up.css" type="text/css"></link>
 <link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css" type="text/css"></link>
 <link rel="stylesheet" href="<?php echo base_url();?>css/page-content.css" type="text/css"></link>
-<script src="<?php echo base_url();?>js/jquery.js"></script>
 <body>
 	<?php $this->load->view('/templates/header');?>
 	<div id="sign_up_wrapper">
@@ -220,6 +219,7 @@
 		<?php form_close();?>
 	</div>
 	<?php $this->load->view('/templates/footer');?>
+	<script src="<?php echo base_url();?>js/jquery.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			$("#fieldset-user").hide();

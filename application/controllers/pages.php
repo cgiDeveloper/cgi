@@ -62,12 +62,30 @@ class Pages extends CI_Controller
 
 	public function news()
 	{
-		$this->load->view('/'.__FUNCTION__.'/index_view');
+		$this->load->model(__FUNCTION__);
+
+		$data['news'] = $this->news->get_news_list($this->code_lang);
+		$data['dl_message'] = $this->lang->line('content_download');
+
+		//echo "<pre>";print_r($data['news']);
+		$this->load->view('/'.__FUNCTION__.'/index_view', $data);
 	}
+
+	/*public function news_detail()
+	{
+
+	}*/
 
 	public function retail_location()
 	{
+		$this->load->model('member');
+
+		$data['dl_message'] = $this->lang->line('content_download'); 
+		$data['region_name'] = $this->member->get_member_region();
+		for($i=0;$i<count($data['region_name']);$i++)
+			$data['region_name'][$i]['child'] = $this->member->get_member_location(1, $data['region_name'][$i]['id_region']);
 		$data['title'] = $this->get_contents($this->code_lang, __FUNCTION__);
+		//echo "<pre>";print_r($data['region_name']);
 
 		$this->load->view('/'.__FUNCTION__.'/index_view', $data);	
 	}
