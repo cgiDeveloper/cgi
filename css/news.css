@@ -1,0 +1,49 @@
+/*******************************css untuk page news***********************************/
+.news-box
+{
+	border-top:1px solid #cecccc;
+	margin-top:10px;
+}
+
+.title-news-detail a
+{
+	color:#3a322d;
+}
+
+.title-news-detail a:hover
+{
+	color:black;
+	text-decoration: none;
+}
+
+.news-title
+{
+	color:#45a40c;
+}
+
+.news-title a
+{
+	color:#45a40c;
+}
+
+.news-title a:hover
+{
+	text-decoration: none;
+	color:#025416;
+}
+
+h3.news-title
+{
+	margin:0px;
+}
+
+p.post-time
+{
+	font-size: 11px;
+}
+
+.news-detail-btn
+{
+	float:right;
+}
+/*******************************akhir css untuk page news*****************************/
