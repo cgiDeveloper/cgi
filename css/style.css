@@ -104,9 +104,11 @@ clear:both;
 #menu
 {
 	width:1000px;
-	padding:15px 0px;
+	/*padding:15px 0px;*/
+	height: 48px;
 	border:1px solid #cecccc;
 	margin:0px auto;
+	background-color: #fff;
 }
 
 #menu ul
@@ -146,9 +148,10 @@ clear:both;
 .main-menu a
 {
 	border-left:dotted 2px #cecccc;
-	padding:15px 57px;
+	padding:14px 57px;
 	text-decoration:none;
 	color:#2d2c2a;
+	display:block;
 }
 
 .main-menu:first-child a
@@ -174,7 +177,13 @@ clear:both;
 	padding: 0px;
 	border:none;
 	font-weight: bold;
-	border-bottom: 1px solid #cecccc;
+	/*border-bottom: 1px solid #cecccc;*/
+	/*text-decoration: none;*/
+}
+
+.child-menu a:hover
+{
+	text-decoration: underline;
 }
 
 .child-menu:hover .submenu
@@ -201,12 +210,17 @@ clear:both;
 	font-weight: normal;
 }
 
+.child-menu2 a:hover
+{
+	text-decoration: underline;
+}
+
 .submenu
 {
 	display: none;
 	padding:10px;
 	position:absolute;
-	margin-top:15px;
+	/*margin-top:15px;*/
 	border:1px solid #cecccc;
 	background-color:white;
 	z-index:2000;

@@ -23,4 +23,34 @@ class Member extends CI_Model
 		$res = $this->db->get();
 		return $res->result_array();
 	}
+
+	public function check_member($email, $pass)
+	{
+		$cond = array('email' => $email, 'password' => $pass, 'status' => 1);
+		$this->db->select('id, store_name');
+		$this->db->where($cond);
+		$this->db->limit(1);
+		$this->db->from('member');
+		$res = $this->db->get();
+		return $res->result_array();
+	}
+
+	public function check_email($email)
+	{
+		$cond = array('email' => $email, 'status' => 1);
+		$this->db->select('id, email');
+		$this->db->where($cond);
+		$this->db->limit(1);
+		$this->db->from('member');
+		$res = $this->db->get();
+		return $res->result_array();	
+	}
+
+	public function update_pass($id, $email, $pass)
+	{
+		$cond = array('id' => $id);
+		$data = array('password' => $pass);
+		$this->db->where('id', $id);
+		$this->db->update('member', $data);
+	}
 }

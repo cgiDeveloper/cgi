@@ -10,15 +10,19 @@
 		<div id="login-form">
 			<div class="top-title">
 				<h3>Reseller Login</h3>
+				<?php
+				if($this->session->flashdata('err_message'))
+       			 	echo "<div class='alert alert-error'>".$this->session->flashdata('err_message')."</div>";
+       			 ?>
 			</div>
 			<div id="login-box">
-			<?php echo form_open('login/check_login');?>
+			<?php echo form_open('member_pages/check_login');?>
 				<div id="form-row1">
 					<?php
 						$label_att = array('class'=>'label_login') ;
 						echo form_label('Email', 'inputemail', $label_att);
 						$emailform = array('name'=>'inputemail', 'id'=>'inputemail');
-						$passwordform = array('name'=>'inputpassword', 'id'=>'inputpassword');
+						$passwordform = array('name'=>'inputpassword', 'id'=>'inputpassword', 'type'=>'password');
 					?>
 					<div class="input-text">
 						<?php echo form_input($emailform);?>
@@ -43,7 +47,7 @@
 			<?php ?>
 			</div>
 			<div id="forgotpassword" class="top-title">
-				<a href="<?php echo $this->config->site_url();?>/login/requestpassword" style="font-size:11px;text-decoration:none;color:#44a20b;"><?php echo $question;?></a>
+				<a href="<?php echo $this->config->site_url();?>/pages/forget_password" style="font-size:11px;text-decoration:none;color:#44a20b;"><?php echo $question;?></a>
 			</div>
 		</div>
 		<div id="register-form">

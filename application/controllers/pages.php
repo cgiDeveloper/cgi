@@ -119,6 +119,15 @@ class Pages extends CI_Controller
 		$this->load->view('/'.__FUNCTION__.'/index_view', $data);
 	}
 
+	public function forget_password()
+	{
+		$this->load->helper('form');
+
+		$this->lang->load('message', $this->language);
+		$data['question'] = $this->lang->line('forget_msg');
+		$this->load->view('/'.__FUNCTION__.'/index_view', $data);
+	}
+
 	public function sign_up()
 	{
 		$this->load->helper('form');

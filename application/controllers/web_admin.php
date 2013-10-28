@@ -6,6 +6,8 @@ class Web_admin extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper('form');
+		$this->language = 'indonesia';
+		$this->code_lang = 'ind';
 	}
 	
 	public function index()
@@ -23,9 +25,11 @@ class Web_admin extends CI_Controller
 	
 	public function check()
 	{
-		$uname = $this->input->post('username');
-		$pass = $this->input->post('password');
 		$this->load->model('check_user');
+		$this->lang->load('err_message', 'indonesia');
+
+		$uname = htmlentities($this->input->post('username'));
+		$pass = htmlentities($this->input->post('password'));
 		$user = $this->check_user->web_admin($uname, $pass);
 		if($user)
 		{
@@ -34,7 +38,10 @@ class Web_admin extends CI_Controller
 			redirect($this->config->site_url()."/web_admin/");
 		}
 		else
+		{
+			$this->session->set_flashdata('err_user', $this->lang->line('err_login'));
 			redirect($this->config->site_url()."/web_admin/login");
+		}
 	}
 	
 	public function logout()
