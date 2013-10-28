@@ -101,6 +101,9 @@ class Pages extends CI_Controller
 
 	public function product()
 	{
+		$this->load->model(__FUNCTION__);
+
+		$data['category'] = $this->product->get_category($this->language);
 		$this->load->view('/'.__FUNCTION__.'/index_view');
 	}
 

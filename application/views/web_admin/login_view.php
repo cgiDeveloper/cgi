@@ -50,7 +50,6 @@
 		?>
       <?php echo form_open('web_admin/check',$form_att);?>
         <h2 class="form-signin-heading">sign in</h2>
-        <!--<div class="alert alert-error">Username dan password tidak cocok</div>-->
         <?php 
       if($this->session->flashdata('err_user'))
         echo "<div class='alert alert-error'>".$this->session->flashdata('err_user')."</div>";

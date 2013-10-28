@@ -26,7 +26,7 @@ class Member extends CI_Model
 
 	public function check_member($email, $pass)
 	{
-		$cond = array('email' => $email, 'password' => $pass, 'status' => 1);
+		$cond = array('email' => $email, 'password' => md5($pass), 'status' => 1);
 		$this->db->select('id, store_name');
 		$this->db->where($cond);
 		$this->db->limit(1);

@@ -225,11 +225,11 @@ clear:both;
 	background-color:white;
 	z-index:2000;
 }
-
+/*
 .submenu:hover
 {
 	display: block;
-}
+}*/
 /*************************************css untuk carousel**********************************/
 #carousel-container
 {
