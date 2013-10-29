@@ -23,7 +23,7 @@
 		</div>
 		<div id="myaccount">
 			<div style="float:left;"><label><?php echo $words['account'];?></label></div>
-			<div style="float:left;margin-left:10px;margin-top:1px;"><a href="<?php echo $this->config->site_url();?>/pages/login"><?php echo $words['login'];?></a> | <a href="<?php echo $this->config->site_url();?>/pages/sign_up"><?php echo $words['signup'];?></a> | <a href="<?php echo $this->config->site_url();?>/pages/catalog_download"><?php echo $words['download'];?></a></div>
+			<div style="float:left;margin-left:10px;margin-top:1px;"><a href="<?php echo $this->config->site_url();?>/pages/login"><?php echo $words['login'];?></a> | <a href="<?php echo $this->config->site_url();?>/pages/sign-up"><?php echo $words['signup'];?></a> | <a href="<?php echo $this->config->site_url();?>/pages/catalog-download"><?php echo $words['download'];?></a></div>
 			<div class="clear"></div>
 		</div>
 	</div>
@@ -38,16 +38,16 @@
 		{
 			if($list_menu['child'])
 			{
-				$submenu = "<li class='main-menu haschild'><a href='".$this->config->site_url()."/".$list_menu['link']."'>".$list_menu['text']."</a><div class='submenu'><ul>";
+				$submenu = "<li class='main-menu haschild'><a href='".$this->config->site_url()."/".str_replace("_", "-", $list_menu['link'])."'>".$list_menu['text']."</a><div class='submenu'><ul>";
 				foreach($list_menu['child'] as $child_menu)
 				{
-					$submenu .= "<li class='child-menu'><a href='".$this->config->site_url()."/".$child_menu['link']."'>".$child_menu['text']."</a>";
+					$submenu .= "<li class='child-menu'><a href='".$this->config->site_url()."/".str_replace("_", "-", $child_menu['link'])."'>".$child_menu['text']."</a>";
 					if($child_menu['child'])
 					{
 						$submenu .= "<ul>";
 						foreach($child_menu['child'] as $child_menu2)
 						{
-							$submenu .= "<li class='child-menu2'><a href='".$this->config->site_url()."/".$child_menu2['link']."'>".$child_menu2['text']."</a>";
+							$submenu .= "<li class='child-menu2'><a href='".$this->config->site_url()."/".str_replace("_", "-", $child_menu2['link'])."'>".$child_menu2['text']."</a>";
 						}
 						$submenu .= "</ul>";
 					}
@@ -57,7 +57,7 @@
 				echo $submenu;
 			}
 			else
-				echo "<li class = 'main-menu'><a href='".$this->config->site_url()."/".$list_menu['link']."'>".$list_menu['text']."</a></li>";
+				echo "<li class = 'main-menu'><a href='".$this->config->site_url()."/".str_replace("_", "-", $list_menu['link'])."'>".$list_menu['text']."</a></li>";
 		}		
 	?>
 	</ul>

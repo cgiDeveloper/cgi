@@ -40,8 +40,11 @@ class Sign_up extends CI_model
 
 	public function get_item_category($lang)
 	{
-		$cond = array('status'=>1, 'lang'=>$lang);
-		$this->db->select('id, category_name');
+		$category_lang = ($lang == 'en')? 'category_name_en':'category_name_id';
+		$cond = array('status'=>1);
+		$options = array('id', $category_lang);
+		$options_str = implode(",", $options);
+		$this->db->select($options_str);
 		$this->db->where($cond);
 		$this->db->order_by('id');
 		$this->db->from('product_category');

@@ -37,9 +37,11 @@
 | in the URL cannot be matched to a valid route.
 |
 */
-
+$route['web-admin'] = "web_admin/index";
+$route['product/(:any)'] = "pages/category_product/$1";
 $route['default_controller'] = "pages";
 $route['404_override'] = '';
+$route['(:any)'] = "pages/$1";
 
 
 /* End of file routes.php */

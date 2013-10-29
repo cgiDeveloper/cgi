@@ -70,3 +70,42 @@ h1
 	background-repeat:no-repeat;
 	background-position:left center;
 }
+
+/*********************************************css untuk halaman product***************************************/
+.category-list
+{
+	float:left;
+	list-style: none;
+	border:1px solid #cecccc;
+	margin:20px 0px 0px 20px;
+}
+
+.categoryimage
+{
+	border-bottom:1px solid #cecccc;
+}
+
+.categoryimage img
+{
+	width:200px;
+	height: 200px;
+}
+.category
+{
+	margin:0px;
+	padding:0px;
+}
+.categoryname
+{
+	padding:10px 18px;
+}
+.categoryname a
+{
+	color:#666666;
+	font-size: 16px;
+}
+.categoryimage a:hover img
+{
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+}

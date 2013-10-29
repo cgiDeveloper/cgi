@@ -67,7 +67,7 @@
 		<?php 			
 			foreach($footer['menu_footer'] as $footer_link)
 			{
-				echo "<li><a href='".$this->config->site_url()."/".$footer_link['link']."'>".$footer_link['text']."</a></li>";
+				echo "<li><a href='".$this->config->site_url()."/".str_replace("_", "-", $footer_link['link'])."'>".$footer_link['text']."</a></li>";
 			}
 		?>
 		</ul>

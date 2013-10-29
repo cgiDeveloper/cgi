@@ -1,5 +1,6 @@
 body{
-background-color:#E6E6E6;
+/*background-color:#E6E6E6;*/
+background:#f1f1ef url(../images/bg.jpg);
 margin:0px;
 padding:0px;
 font-family:arial;

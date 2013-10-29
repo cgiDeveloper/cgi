@@ -6,17 +6,15 @@ class Product extends CI_Model
 		parent::__construct();
 	}
 
-	public function get_category($lang)
+	public function get_product_list($cat_id)
 	{
-		$category_lang = ($lang == 'en')? 'category_name_en':'category_name_id';
-		$options = array('id', $category_lang, 'img_category');
-		$options_str = implode(",", $options);
-		$cond = array('lang' => $lang, 'status' => 1);
-		$this->db->select($options_str);
+		$cond = array('status' => 1, 'id_category' => $cat_id);
+		$this->db->select('id, product_name, product_description, img_product');
 		$this->db->where($cond);
-		$this->db->order_by('id');
+		$this->db->order_by('order');
 		$this->db->from('product');
 		$res = $this->db->get();
 		return $res->result_array();
+		//return "asshole";
 	}
 }

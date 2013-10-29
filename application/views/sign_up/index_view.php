@@ -166,7 +166,10 @@
 				<div class="input-signup label-signup">
 					<?php 
 						foreach($category_product as $category)
-							echo "<input type='checkbox' name='member_items' value='".$category['id']."'>".$category['category_name'].".<br>";
+							if($category['category_name_en'])
+								echo "<input type='checkbox' name='member_items' value='".$category['id']."'>".$category['category_name_en'].".<br>";
+							else
+								echo "<input type='checkbox' name='member_items' value='".$category['id']."'>".$category['category_name_id'].".<br>";
 					?>
 				</div>
 				<div class="clear"></div>
@@ -176,7 +179,10 @@
 				<div class="input-signup label-signup">
 					<?php 
 					foreach($category_product as $category)
-							echo "<input type='checkbox' name='member_interests' value='".$category['id']."'>".$category['category_name'].".<br>";
+							if($category['category_name_en'])
+								echo "<input type='checkbox' name='member_items' value='".$category['id']."'>".$category['category_name_en'].".<br>";
+							else
+								echo "<input type='checkbox' name='member_items' value='".$category['id']."'>".$category['category_name_id'].".<br>";
 					?>
 				</div>
 				<div class="clear"></div>

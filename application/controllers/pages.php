@@ -101,13 +101,32 @@ class Pages extends CI_Controller
 
 	public function product()
 	{
-		$this->load->model(__FUNCTION__);
+		$this->load->model('category');
 
-		$data['category'] = $this->product->get_category($this->language);
-		$this->load->view('/'.__FUNCTION__.'/index_view');
+		$data = $this->get_contents($this->code_lang, __FUNCTION__);
+		$data['dl_message'] = $this->lang->line('content_download');
+		$data['category'] = $this->category->get_category($this->code_lang);
+		//echo "<pre>";print_r($data);
+		$this->load->view('/'.__FUNCTION__.'/index_view', $data);
 	}
 
-	public function get_product()
+	public function category_product($name)
+	{
+		$this->load->model('product');
+		$this->load->model('category');
+
+		$data['dl_message'] = $this->lang->line('content_download');
+		$idproduct = htmlentities($name);
+		$category_id = $this->category->get_category_id($this->code_lang, $name);
+		$data['products'] = $this->product->get_product_list($category_id[0]['id']);
+		$data['img_category'] = $category_id[0]['img_category_big'];
+		$data['title'] = ucfirst($this->uri->segment(2));
+		$data['breadcrumbs'] = array(ucfirst($this->uri->segment(1)), ucfirst($this->uri->segment(2)));
+		//echo "<pre>";print_r($data);
+		$this->load->view('/'.__FUNCTION__.'/index_view', $data);
+	}	
+
+	public function get_product($name)
 	{
 		$this->load->view('/'.__FUNCTION__.'/index_view');
 	}
